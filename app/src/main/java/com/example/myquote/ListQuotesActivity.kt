@@ -49,7 +49,7 @@ class ListQuotesActivity : AppCompatActivity() {
                 Log.d(TAG, result)
                 try{
                     val jsonArray = JSONArray(result)
-                    for(i in 0..jsonArray.length()){
+                    for(i in 0 until jsonArray.length()){
                         val jsonObject = jsonArray.getJSONObject(i)
                         val quote = jsonObject.getString("en")
                         val author = jsonObject.getString("author")
